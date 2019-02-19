@@ -1,5 +1,28 @@
 # Simple CRUD MySQL Database Access
 
+### Installation
+
+Clone the repo:
+
+```
+git clone https://github.com/alsofronie/simple-crud.git
+cd simple-crud
+```
+
+Copy the `env.example` file into `.env` file and modify to reflect your database setup:
+
+```
+cp env.example .env
+```
+
+Install the dependencies:
+
+```
+npm install
+```
+
+If you have nodemon installed globally, you can run `npm run dev`. If not, simple run `npm run serve`.
+
 ### Why
 
 We find ourselves in the course of development process that we need a simple, CRUD access to a remote database. We need to write routes, controllers, actions, domains, repositories and many more of these complicated things and, worse, many times the tasks and functions are somewhat repetitive. We all hate this.
@@ -67,9 +90,11 @@ const rulesForUsersTable = {
     ]
   }
 };
+
+module.exports = rulesForUsersTable;
 ```
 
-All the configurations are self-explanatory.
+The rules are self-explanatory. They are detailed below. Note that at this point, this file can be pretty much a JSON file. Javascript was chosen just to avoid all the quotes :).
 
 ### The listing
 
