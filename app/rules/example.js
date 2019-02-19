@@ -1,7 +1,8 @@
 /*
- * A table named example (file name) with the following definition:
 
-CREATE TABLE `example` (
+A table named users with the following definition:
+
+CREATE TABLE `users` (
   `id` char(36) CHARACTER SET ascii NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -17,6 +18,7 @@ CREATE TABLE `example` (
 
  */
 module.exports = {
+  name: 'users',
   key: 'id',
   fields: ['id', 'email', 'password', 'name', 'level', 'is_active', 'created_at', 'updated_at'],
   listing: {
